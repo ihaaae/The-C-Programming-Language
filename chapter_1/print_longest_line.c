@@ -52,7 +52,6 @@ void copy(char from[], char to[])
 // 1.16
 void print_line_length()
 {
-
     char line[MAXLINE];
 
     int max = 0;
@@ -73,7 +72,28 @@ void print_line_80()
 }
 
 // 1.18
-void erase_blank()
+void erase_blank(char line[], int len)
 {
-    
+    int i;
+    for(i = len - 1; i >= 0; i--) {
+        if(line[i] == ' ') {
+        }
+        else {
+            line[i + 1] = '\0';
+            break;
+        }
+    }
+    if(i == -1) {
+        line[i + 1] = '\0';
+    }
+}
+
+// 1.19
+void reverse_line(char line[], int len)
+{
+    for(int i = len, j = 0; i > j; i--, j++) {
+        int c = line[i];
+        line[i] = line[j];
+        line[j] = c;
+    }
 }

@@ -41,7 +41,7 @@ void file_copy_replace_tab () {
     while((c = getchar()) != EOF) {
         if(c == '\t') {
             putchar('\\');
-            putchar('t')
+            putchar('t');
         }
         else if(c == '\\') {
             putchar('\\');
