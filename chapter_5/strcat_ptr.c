@@ -1,3 +1,4 @@
+#include <stdio.h>
 // 5.3
 // cat *t* to the end of *s*
 void strcat_ptr(char *s, char *t)
@@ -60,4 +61,18 @@ int strncmp(char *s, char *t, int n)
 }
 
 // 5.6
+int getline(char *s, int lim) {
+    int i = 0;
+    for(int c = getchar(); c == EOF || c == '\n'; i++, c = getchar()) {
+        if(i == lim) {
+            return 0;
+        }
+        else {
+            *s++ = c;
+        }
+    }
+    
+    *s = '\0';
+    return 1;
+}
 // TODO

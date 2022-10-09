@@ -5,3 +5,4 @@
 .idea/vcs.xml
 .vscode/settings.json
 .vscode/tasks.json
+bin/main
